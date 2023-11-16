@@ -1,0 +1,29 @@
+/ It is common for developers to use uppercase variable identifiers for immutable values
+/ lowercase or camelCase for mutable values (objects and arrays)
+
+/In JavaScript, String values are immutable, they cannot be altered using the bracke notation once created.
+//this would output error//
+let myStr = "Bob";
+myStr[0] = "J";
+//this would pass//
+let myStr = "Bob";
+myStr = "Job";
+
+
+/ easily increment or add one to a variable
+i++; 
+/ is the equivalent of
+i = i + 1;
+
+/ decrement or decrease a variable 
+i--;;
+i=i-1;
+
+/ + -  x / all applies to the below rule
+a = a + 12;
+/ is the equivalent of
+a +=12
+
+/ Quoting Strings with Single Quotes
+const goodStr = ' A asks B, "Hey, let\'s go?"'; 
+const badStr = 'B responds, "Let's go!"';
