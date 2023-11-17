@@ -1,0 +1,21 @@
+/* functions */
+
+function testFunction() {
+  console.log('Hello World');
+};
+
+// All of the code between the curly braces will be executed every time the function is called.
+testFunction();
+
+//function with arguments
+function functionWithArgs(a,b){
+  console.log(a+b);
+};
+
+functionWithArgs(3,5);
+
+//return: use a return statement to send a value back out of a function.
+//a function timesFive that accepts one argument, multiplies it by 5, and returns the new value.
+function timesFive(a) {
+  return a*5;
+};
