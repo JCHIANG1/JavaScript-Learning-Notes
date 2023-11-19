@@ -48,4 +48,40 @@ function equaltest(num){
 // true ->  3 !== '3' 
 // true ->  4 !==  3 
 
-// greater than operator (>) 
+// greater than operator (>) Like the equality operator, the greater than operator will convert data types of values while comparing.
+// true ->  5   >  3
+// true ->  7   > '3' 
+// false -> 2   >  3  
+// false -> '1' >  9 
+
+function testGreaterThan(val) {
+  if (val>100) { 
+    return "Over 100";
+  }
+  if (val>10) { 
+    return "Over 10";
+  }
+  return "10 or Under";
+}
+
+testGreaterThan(10);
+
+// Like the equality operator, the below 3 operators will convert data types while comparing.
+//The greater than or equal to operator (>=) 
+//The less than operator (<) 
+//The less than or equal to operator (<=) 
+
+//The logical and operator (&&)
+if (num > 5) {
+   if (num < 10){
+      return true;
+   }
+}
+return false;
+
+
+// can written as
+if (num > 5 && num < 10) {
+  return true;
+}
+return false;
