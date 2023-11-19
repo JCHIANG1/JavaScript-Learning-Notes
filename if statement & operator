@@ -66,12 +66,12 @@ function testGreaterThan(val) {
 
 testGreaterThan(10);
 
-// Like the equality operator, the below 3 operators will convert data types while comparing.
+//Like the equality operator, the below 3 operators will convert data types while comparing:
 //The greater than or equal to operator (>=) 
 //The less than operator (<) 
 //The less than or equal to operator (<=) 
 
-//The logical and operator (&&)
+////Here is the pseudocode of the logical and operator (&&)
 if (num > 5) {
    if (num < 10){
       return true;
@@ -79,9 +79,52 @@ if (num > 5) {
 }
 return false;
 
-
-// can written as
+// can be written as
 if (num > 5 && num < 10) {
   return true;
 }
 return false;
+
+// The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+
+//if...else: Order is important in if, else if statements. The function is executed from top to bottom.
+//Here is the pseudocode of multiple chained if / else if statements:
+if (condition1) {
+  statement1
+} else if (condition2) {
+  statement2
+} else if (condition3) {
+  statement3
+. . .
+} else {
+  statementN
+}
+
+function testElse(val) {
+  let result = "";
+  if (val > 5) {
+    result = "Bigger than 5";
+  } else {
+    result = "5 or Smaller";
+  }
+  return result;
+};
+
+testElse(4);
+
+// if...else if.... else
+
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  }
+  else if (val < 5) {
+    return "Smaller than 5";
+  }
+  else {
+     return "Between 5 and 10";
+  }
+};
+
+testElseIf(7);
+
