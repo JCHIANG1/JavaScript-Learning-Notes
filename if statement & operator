@@ -1,0 +1,51 @@
+//*Conditional Logic with If Statements*//
+
+function testIf(myCondition){
+    if (myCondition){
+      return "myCondition is true" ;
+    }
+    return "myCondition is false"; 
+};
+
+testIf(true); // return "myCondition is true" 
+testIf(false); // return  "myCondition is false" 
+
+
+//typeof
+typeof 3; //number
+typeof '3'; //string
+
+
+//the Equality Operator (==) If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values
+
+// true -> 1   ==  1  
+// false ->  1   ==  2 
+// true ->  1   == '1' // true
+// true ->  "3" ==  3  // true
+
+function equaltest(num){
+   if (num == 12){
+     return 'True';
+   }
+   return 'False';
+}
+ equaltest(10);
+
+//the Strict equality ===, it does not perform a type conversion. If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
+// true ->  3 ===  3  
+// false -> 3 === '3' 
+
+
+// inequality operator (!=) Like the equality operator, the inequality operator will convert data types of values while comparing.
+// true ->  1 !=  2    
+// false -> 1 != "1"  
+// false -> 1 != '1'   
+// false -> 1 != true  
+// false -> 0 != false 
+
+// strict inequality operator (!==)
+// false -> 3 !==  3  
+// true ->  3 !== '3' 
+// true ->  4 !==  3 
+
+// greater than operator (>) 
