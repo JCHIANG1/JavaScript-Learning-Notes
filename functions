@@ -41,3 +41,21 @@ myLocalScope();
 
 // myVar is not defined outside of myLocalScope
 console.log('outside myLocalScope', myVar);
+
+//When local & global variables have the same name the local variable takes precedence over the global variable.
+const outerWear = "Shirt";
+
+function myOutfit() {
+  outerWear = "t-Shirt";
+  return outerWear;
+}
+myOutfit(); // the output should be "t-Shirt"
+
+//When the function doesn't have a return statement, when you call it, the function processes the inner code, the function will change the global variable but the returned value of the function is undefined.
+let sum = 0;
+function addSum(num) {
+  sum += num;
+}
+addSum(3);
+
+
