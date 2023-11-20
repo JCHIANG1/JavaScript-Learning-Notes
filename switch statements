@@ -1,0 +1,78 @@
+//* Switch Statements *//
+
+function testSwitch(val){
+let out = ""
+switch(val){
+case 1: 
+  console.log("this is 1");
+  out = "this is 1";
+  break;
+case 2:
+  console.log("this is 2");
+  out = "this is 2";
+  break;
+}
+return out
+};
+
+ testSwitch(1);
+
+// case... default ->  the default statement will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
+
+function testSwitch2(val){
+  let answer = ""
+  switch(val){
+     case 1:
+     answer = "a";
+     break;
+     case 2:
+     answer = "b";
+     break;
+     default:
+     answer = "others";
+     break;
+  }
+  return answer;
+};
+
+testSwitch2(3);
+
+//Multiple Identical Options in Switch Statements
+function testSwitch3(val){
+  let answer = ""
+  switch(val){
+     case 1:
+     case 2:
+     case 3:
+     answer = "1,2 or 3";
+     break;
+     case 4:
+     answer = "4";
+     break;
+     default:
+     answer = "others";
+  }
+  return answer;
+};
+
+testSwitch3(2);
+
+// if...else vs switch statement 
+if (val === 1){
+  answer = "a";
+} else if (val === 2){
+  answer = "b";
+}else {
+  answer = "c";
+};
+
+switch (val) {
+  case 1:
+    answer = "a";
+    break;
+  case 2:
+    answer = "b";
+    break;
+  default:
+    answer = "c";
+}
