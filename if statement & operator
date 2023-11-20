@@ -125,6 +125,31 @@ function testElseIf(val) {
      return "Between 5 and 10";
   }
 };
-
 testElseIf(7);
+
+// if/else and return
+function isEqual(a, b) {
+  if (a === b){
+    return true;
+  } else {
+    return false:
+  }
+};
+
+// can be rewritten as the following
+function isEqual(a, b) {
+  return a === b;
+};
+
+//the function exits at the return statement
+function myFun() {
+  console.log("Hello");
+  return "World";
+  console.log("byebye")
+}
+myFun(); \\the string byebye will never display in the console
+
+
+
+
 
