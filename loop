@@ -55,3 +55,13 @@ do {
   i++;
 } while (i < 5); // the myArray is =[5]
 
+/* replacing loops using recursion */
+/ note: recursive functions must have a base case when they return without calling the function again, otherwise they can never finish executing.
+/ write a recursive function, sum(arr, n), that returns the sum of the first n elements of an array arr.
+function sum(arr, n) {
+  if(n<=0){
+    return 0;
+  } else {
+    return sum(arr,n-1)+arr[n-1];
+  }
+}
