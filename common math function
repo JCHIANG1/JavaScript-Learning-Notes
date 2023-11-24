@@ -1,7 +1,0 @@
-
-// Math.random() ->  function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). 
-function randomFraction() {
-  return Math.random();
-}
-
-//Math.floor() function -> round number down to its nearest whole number.
