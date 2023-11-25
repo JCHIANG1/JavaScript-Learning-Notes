@@ -26,6 +26,9 @@ console.log(camper);
 let camper1 = "James";
 let camper1 = "David";
 
+// When declare a variable with var, it is declared globally, or locally if declared inside a function.
+// When declare a variable with let, it behaves similarly, but with some extra features. When declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
+
 
 / easily increment or add one to a variable
 i++; 
