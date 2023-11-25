@@ -6,28 +6,37 @@
 const goodStr = ' A asks B, "Hey, let\'s go?"'; 
 const badStr = 'B responds, "Let's go!"';
 
-/* var, let, const */ 
+/ let */ 
 /In JavaScript, String values are immutable, they cannot be altered using the bracket notation once created.
-//this would output error//
+/this would output error/
 let myStr = "Bob";
 myStr[0] = "J";
-//this would pass//
+
+/this would pass/
 let myStr1 = "Bob";
 myStr1 = "Job";
 
-//this would pass// 
-// var keyword -> you can easily overwrite variable declarations //
+/* var vs let */
+/this would pass/
+/ var keyword -> you can easily overwrite variable declarations /
 var camper = "James";
 var camper = "David";
 console.log(camper);
 
-//this would failed//  
-// let keyword -> unlike var, when use let, a variable with the same name can only be declared once. //
+/this would failed/
+/ let keyword -> unlike var, when use let, a variable with the same name can only be declared once. /
 let camper1 = "James";
 let camper1 = "David";
 
-// When declare a variable with var, it is declared globally, or locally if declared inside a function.
-// When declare a variable with let, it behaves similarly, but with some extra features. When declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
+/ When declare a variable with var, it is declared globally, or locally if declared inside a function.
+/ When declare a variable with let, it behaves similarly, but with some extra features. When declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
+
+/* const vs let */
+/objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier.
+const s = [5, 6, 7];
+s = [1, 2, 3]; /this would failed, s can't be reassigned 
+s[2] = 45;
+console.log(s); /[5, 6, 45]
 
 
 / easily increment or add one to a variable
