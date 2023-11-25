@@ -38,6 +38,15 @@ s = [1, 2, 3]; /this would failed, s can't be reassigned
 s[2] = 45;
 console.log(s); /[5, 6, 45]
 
+/ freeze the object to prevent the mutation
+let obj{
+a:"abc",
+b:"cde"
+};
+Object.freeze(obj);
+obj.a="cd" / this would return error
+
+
 
 / easily increment or add one to a variable
 i++; 
