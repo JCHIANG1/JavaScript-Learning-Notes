@@ -12,8 +12,19 @@ const badStr = 'B responds, "Let's go!"';
 let myStr = "Bob";
 myStr[0] = "J";
 //this would pass//
-let myStr = "Bob";
-myStr = "Job";
+let myStr1 = "Bob";
+myStr1 = "Job";
+
+//this would pass// 
+// var keyword -> you can easily overwrite variable declarations //
+var camper = "James";
+var camper = "David";
+console.log(camper);
+
+//this would failed//  
+// let keyword -> unlike var, when use let, a variable with the same name can only be declared once. //
+let camper1 = "James";
+let camper1 = "David";
 
 
 / easily increment or add one to a variable
