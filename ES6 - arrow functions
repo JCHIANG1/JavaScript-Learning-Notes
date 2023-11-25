@@ -28,3 +28,11 @@ const doubler = item => item * 2; /If an arrow function has a single parameter, 
 
 / it can also have 2 arguments
 const doubler = (item, multi) => item * multi;
+
+/* set default parameter */
+
+const test = (name = "default name") => "hello " + name;
+console.log(test("Joe")) / "hello Joe"
+console.log(test()) / "default name"
+
+
