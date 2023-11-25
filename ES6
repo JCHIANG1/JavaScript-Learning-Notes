@@ -21,3 +21,34 @@ const max1 = Math.max(...arr);
 / ES5
 const max2 = Math.max.apply(null,arr); 
 
+/* destructuring syntax */
+
+/ example#1
+/ ES5
+const user = { name: 'John', age: 30 };
+const name = user.name;
+const age = user.age;
+/ ES6 ->  the name and age variables will be created and assigned the values of their respective values from the user object.
+const {name,age} = user;
+
+/ example#2
+/ assign a new variable name when extracting values. 
+const {name: new_name, age: new_age} = user;
+
+/ example#3
+/ assign variables from nested objects
+
+const user2 = {
+  john: { 
+    age: 34,
+    email: 'johnDoe@'
+  }
+};
+/ extract the values of object properties and assign them to variables with the same name
+const {john: {age,email} }= user2;
+/  assign an object properties' values to variables with different names
+const {john: {age: new_age2, email: new_email} } = user2;
+
+
+
+
