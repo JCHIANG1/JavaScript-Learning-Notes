@@ -1,0 +1,23 @@
+/*  the rest parameter for function parameters */
+function howMany(...args) {
+  / for this example, we can ignore the line to define the args within the function 
+  return "You have passed " + args.length + " arguments.";
+}
+console.log(howMany(0, 1, 2));
+console.log(howMany("string", null, [1, 2, 3], { }));
+
+
+/* spread operator */  to expand arrays and other expressions in places where multiple parameters or elements are expected.
+/ ...arr returns an unpacked array. It spreads the array, it only works in an argument to a function or in an array literal.
+const arr = [1,2,3,4];
+/ this would pass 
+const test = [...arr];
+/ this would fail
+const test2 = ...arr;
+
+/ if we use write Math.max(arr) it will returns NaN bc Math.max() expects comma-separated arguments, not an array
+/ we can use the spread operator to overcome this.
+const max1 = Math.max(...arr); 
+/ ES5
+const max2 = Math.max.apply(null,arr); 
+
