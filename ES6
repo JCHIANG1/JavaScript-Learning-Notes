@@ -21,6 +21,19 @@ const max1 = Math.max(...arr);
 / ES5
 const max2 = Math.max.apply(null,arr); 
 
+/ spread operator vs destructuring arrays assignment 
+/ the spread operator unpacks all contents of an array into a comma-separated list. But we cannot pick or choose which elements you want to assign to variables.
+/ but destructuring an array lets us do that
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b); /1,2
+const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c); / 1, 2, 5
+
+
+
+
+
+
 /* destructuring syntax */
 
 / example#1
@@ -49,6 +62,39 @@ const {john: {age,email} }= user2;
 /  assign an object properties' values to variables with different names
 const {john: {age: new_age2, email: new_email} } = user2;
 
+/ example#4
+/ destructuring via rest elements: we might want to collect the rest of the elements into a separate array.
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b); /1,2
+console.log(arr);  /3, 4, 5, 7
 
+/ example#5
+/ use destructuring assignment to pass an object as a function's parameters
+const profile = function (profileData) {
+  const name = profileData.name;
+  const age = profileData.age;
+  const nationality = profileData.nationality;
+  const location = profileData.location;
+};
+/ the above code it's equivalent as 
+const profile = (profileData) => {
+  const { name, age, nationality, location } = profileData;
+}
+/ the above code it's equivalent as 
+const profile = ({ name, age, nationality, location }) => {}
+profile(profileData)
+
+/ example#5-1
+const stats = {
+  max: 5,
+  standard_deviation: 4,
+  median: 3,
+  mode: 2,
+  min: 0
+};
+const half = (stats) => (stats.max + stats.min) / 2.0;
+/ the above function it's equivalent as 
+const half = ({max,min}) => (max+min)/2.0;
+half(stats);
 
 
