@@ -6,7 +6,7 @@
 const goodStr = ' A asks B, "Hey, let\'s go?"'; 
 const badStr = 'B responds, "Let's go!"';
 
-/ let */ 
+/* let */ 
 /In JavaScript, String values are immutable, they cannot be altered using the bracket notation once created.
 /this would output error/
 let myStr = "Bob";
@@ -17,19 +17,58 @@ let myStr1 = "Bob";
 myStr1 = "Job";
 
 /* var vs let */
-/this would pass/
+
 / var keyword -> you can easily overwrite variable declarations /
+//this would pass//
 var camper = "James";
 var camper = "David";
 console.log(camper);
 
-/this would failed/
 / let keyword -> unlike var, when use let, a variable with the same name can only be declared once. /
+//this would fail//
 let camper1 = "James";
 let camper1 = "David";
 
-/ When declare a variable with var, it is declared globally, or locally if declared inside a function.
-/ When declare a variable with let, it behaves similarly, but with some extra features. When declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
+//this would fail//
+const constVariable = 'test1';
+const constVariable = 'test2';
+console.log(constVariable);
+
+// Const allow update the properties
+const constVar = {name:'Bob'};
+constVar.name = 'Sally';
+console.log(constVar.name);
+
+/ due to the use of var, the variable is not block-scoped and will be accessible outside the block /
+if (true){
+    var varVariable = 'this is var';
+}
+console.log(varVariable); /'this is var'
+
+if (true){
+    var varVariable = 'test1'
+}
+var varVariable = 'test2'
+console.log(varVariable); /'test2'
+
+/ block-scoping: When declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
+// this would return errors
+if (true){
+    let letVariable = 'this is let';
+}
+console.log(letVariable);
+
+// this would return errors
+if (true){
+    const constVariable = 'this is const';
+}
+console.log(constVariable);
+
+// this would be fine
+if (true){
+    const constVariable = 'this is const';
+    console.log(constVariable);
+}
 
 /* const vs let */
 /objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier.
