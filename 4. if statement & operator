@@ -11,12 +11,7 @@ testIf(true); // return "myCondition is true"
 testIf(false); // return  "myCondition is false" 
 
 
-//typeof
-typeof 3; //number
-typeof '3'; //string
-
-
-//the Equality Operator (==) If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values
+/ the Equality Operator (==) If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values
 
 // true -> 1   ==  1  
 // false ->  1   ==  2 
@@ -31,24 +26,24 @@ function equaltest(num){
 }
  equaltest(10);
 
-//the Strict equality ===, it does not perform a type conversion. If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
+/ the Strict equality ===, it does not perform a type conversion. If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
 // true ->  3 ===  3  
 // false -> 3 === '3' 
 
 
-// inequality operator (!=) Like the equality operator, the inequality operator will convert data types of values while comparing.
+/ inequality operator (!=) Like the equality operator, the inequality operator will convert data types of values while comparing.
 // true ->  1 !=  2    
 // false -> 1 != "1"  
 // false -> 1 != '1'   
 // false -> 1 != true  
 // false -> 0 != false 
 
-// strict inequality operator (!==)
+/ strict inequality operator (!==)
 // false -> 3 !==  3  
 // true ->  3 !== '3' 
 // true ->  4 !==  3 
 
-// greater than operator (>) Like the equality operator, the greater than operator will convert data types of values while comparing.
+/ greater than operator (>) Like the equality operator, the greater than operator will convert data types of values while comparing.
 // true ->  5   >  3
 // true ->  7   > '3' 
 // false -> 2   >  3  
@@ -66,12 +61,12 @@ function testGreaterThan(val) {
 
 testGreaterThan(10);
 
-//Like the equality operator, the below 3 operators will convert data types while comparing:
-//The greater than or equal to operator (>=) 
-//The less than operator (<) 
-//The less than or equal to operator (<=) 
+/ Like the equality operator, the below 3 operators will convert data types while comparing:
+/ The greater than or equal to operator (>=) 
+/ The less than operator (<) 
+/ The less than or equal to operator (<=) 
 
-////Here is the pseudocode of the logical and operator (&&)
+/ Here is the pseudocode of the logical and operator (&&)
 if (num > 5) {
    if (num < 10){
       return true;
@@ -79,16 +74,16 @@ if (num > 5) {
 }
 return false;
 
-// can be written as
+/ can be written as
 if (num > 5 && num < 10) {
   return true;
 }
 return false;
 
-// The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+/ The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
 
-//if...else: Order is important in if, else if statements. The function is executed from top to bottom.
-//Here is the pseudocode of multiple chained if / else if statements:
+/ if...else: Order is important in if, else if statements. The function is executed from top to bottom.
+/ Here is the pseudocode of multiple chained if / else if statements:
 if (condition1) {
   statement1
 } else if (condition2) {
@@ -127,7 +122,7 @@ function testElseIf(val) {
 };
 testElseIf(7);
 
-// if/else and return
+/ if/else and return
 function isEqual(a, b) {
   if (a === b){
     return true;
@@ -136,12 +131,12 @@ function isEqual(a, b) {
   }
 };
 
-// can be rewritten as the following
+/ can be rewritten as the following
 function isEqual(a, b) {
   return a === b;
 };
 
-//the function exits at the return statement
+/ the function exits at the return statement
 function myFun() {
   console.log("Hello");
   return "World";
