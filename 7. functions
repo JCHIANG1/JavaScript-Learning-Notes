@@ -1,61 +1,57 @@
-/* functions */
+//* functions *//
 
 function testFunction() {
   console.log('Hello World');
-};
+}
 
-// All of the code between the curly braces will be executed every time the function is called.
+/ all of the code between the curly braces will be executed every time the function is called.
 testFunction();
 
-//function with arguments
+//* function with arguments *//
 function functionWithArgs(a,b){
   console.log(a+b);
 };
 
-functionWithArgs(3,5);
+functionWithArgs(3,5); /8
 
-//return: use a return statement to send a value back out of a function.
-//a function timesFive that accepts one argument, multiplies it by 5, and returns the new value.
+//* return: use a return statement to send a value back out of a function.*//
+/a function timesFive that accepts one argument, multiplies it by 5, and returns the new value.
 function timesFive(a) {
   return a*5;
 };
 
+//* Scoping *//
+/ In JavaScript, scope refers to the visibility of variables. Variables defined outside of a function block have Global scope. 
+/ Variables that are declared WITHOUT the let or const keywords are automatically created in the global scope.
+/ Variables declared within a function, as well as the function parameters, have local scope. They are only visible within that function.
 
-// In JavaScript, scope refers to the visibility of variables. Variables defined outside of a function block have Global scope. 
-// Variables that are declared without the let or const keywords are automatically created in the global scope.
-
-let myGlobal =10;
-
+let myGlobal =10;  /global
 function fun1() {
-  oopsGlobal = 5// Assign 5 to oopsGlobal here
+  oopsGlobal = 5 /global
 
 }
+console.log(oopsGlobal) /5
 
-//Variables declared within a function, as well as the function parameters, have local scope. They are only visible within that function.
-
+/this would return error/
 function myLocalScope() {
   let myVar = 'here';
   console.log('inside myLocalScope', myVar);
 }
-myLocalScope();
+console.log(myVar) 
 
-// myVar is not defined outside of myLocalScope
-console.log('outside myLocalScope', myVar);
-
-//When local & global variables have the same name the local variable takes precedence over the global variable.
+/When local & global variables have the same name the LOCAL variable takes precedence over the GLOBAL variable.
 const outerWear = "Shirt";
-
 function myOutfit() {
   outerWear = "t-Shirt";
   return outerWear;
 }
 myOutfit(); // the output should be "t-Shirt"
 
-//When the function doesn't have a return statement, when you call it, the function processes the inner code, the function will change the global variable but the returned value of the function is undefined.
+/When the function doesn't have a return statement, when you call it, the function processes the inner code, the function will change the global variable but the returned value of the function is undefined.
 let sum = 0;
 function addSum(num) {
   sum += num;
 }
 addSum(3);
-
+console.log(sum); /3
 
