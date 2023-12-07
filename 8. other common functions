@@ -1,0 +1,47 @@
+
+// Math.random() ->  function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). 
+function randomFraction() {
+  return Math.random();
+}
+
+//Math.floor() function -> round number down to its nearest whole number.
+
+//parseInt() function parses a string and returns an integer. If the first character in the string can't be converted into a number, then it returns NaN.
+// it takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//* Factory function vs Constructor function *//
+/A factory function is a function that returns an object.
+function createPerson(name, age) {
+  return {
+    name: name,
+    age: age,
+    sayHello: function() {
+      console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+  };
+}
+
+const person1 = createPerson('John', 25);
+person1.sayHello();
+
+/ES6
+function createPerson(name, age) {
+  return {
+    name,  // shorthand property
+    age,   // shorthand property
+    sayHello() {  // method shorthand
+      console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+  };
+}
+
+const person1 = createPerson('John', 25);
+person1.sayHello();
+
+/Constructor function: use the new keyword to create instances of objects. 
+/they are similar to classes in other programming languages. The "this" keyword is used to refer to the newly created object.
+/the "new" keyword do 3 things under the hood (1) create an empty object like const x = {} (2) make the "this" to point to the object (3) return the object from the function
+
+
