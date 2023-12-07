@@ -35,7 +35,7 @@ const constVariable = 'test1';
 const constVariable = 'test2';
 console.log(constVariable);
 
-//*scoping*//
+//* scoping *//
 /due to the use of var, the variable is not block-scoped and will be accessible outside the block
 /this would pass/
 if (true){
