@@ -1,12 +1,11 @@
-/* strings */ 
-/ It is common for developers to use uppercase variable identifiers for immutable values
-/ lowercase or camelCase for mutable values (objects and arrays)
+//* strings *// 
+/It is common for developers to use uppercase variable identifiers for immutable values
+/lowercase or camelCase for mutable values (objects and arrays)
 
-/ quoting strings with single quotes
+/quoting strings with single quotes
 const goodStr = ' A asks B, "Hey, let\'s go?"'; 
 const badStr = 'B responds, "Let's go!"';
 
-/* let */ 
 /In JavaScript, String values are immutable, they cannot be altered using the bracket notation once created.
 /this would output error/
 let myStr = "Bob";
@@ -16,30 +15,34 @@ myStr[0] = "J";
 let myStr1 = "Bob";
 myStr1 = "Job";
 
-/* var vs let */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/ var keyword -> you can easily overwrite variable declarations /
-//this would pass//
+//* var vs let - string declaration *//
+
+/var keyword -> you can easily overwrite variable declarations 
+/this would pass/
 var camper = "James";
 var camper = "David";
 console.log(camper);
 
-/ let keyword -> unlike var, when use let, a variable with the same name can only be declared once. /
-//this would fail//
+/let keyword -> unlike var, when use let, a variable with the same name can only be declared once. 
+/this would fail/
 let camper1 = "James";
 let camper1 = "David";
 
-//this would fail//
+/this would fail/
 const constVariable = 'test1';
 const constVariable = 'test2';
 console.log(constVariable);
 
-// Const allow update the properties
+/const allow update the properties
 const constVar = {name:'Bob'};
 constVar.name = 'Sally';
 console.log(constVar.name);
 
-/ due to the use of var, the variable is not block-scoped and will be accessible outside the block /
+//*scoping*//
+/due to the use of var, the variable is not block-scoped and will be accessible outside the block
+/this would pass/
 if (true){
     var varVariable = 'this is var';
 }
@@ -52,25 +55,20 @@ var varVariable = 'test2'
 console.log(varVariable); /'test2'
 
 / block-scoping: When declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
-// this would return errors
+/this would return errors/
 if (true){
     let letVariable = 'this is let';
 }
 console.log(letVariable);
 
-// this would return errors
+/this would return errors/
 if (true){
     const constVariable = 'this is const';
 }
 console.log(constVariable);
 
-// this would be fine
-if (true){
-    const constVariable = 'this is const';
-    console.log(constVariable);
-}
 
-/* const vs let */
+//* const vs let - array declaration *//
 /objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier.
 const s = [5, 6, 7];
 s = [1, 2, 3]; /this would failed, s can't be reassigned 
