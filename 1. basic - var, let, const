@@ -35,11 +35,6 @@ const constVariable = 'test1';
 const constVariable = 'test2';
 console.log(constVariable);
 
-/const allow update the properties
-const constVar = {name:'Bob'};
-constVar.name = 'Sally';
-console.log(constVar.name);
-
 //*scoping*//
 /due to the use of var, the variable is not block-scoped and will be accessible outside the block
 /this would pass/
@@ -68,7 +63,7 @@ if (true){
 console.log(constVariable);
 
 
-//* const vs let - array declaration *//
+//* const vs let - objects declaration *//
 /objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier.
 const s = [5, 6, 7];
 s = [1, 2, 3]; /this would failed, s can't be reassigned 
@@ -81,14 +76,24 @@ FAV_PET = "Dogs"; /this would return error
 
 / freeze the object to prevent the mutation
 / const declaration alone doesn't really protect data from mutation. To ensure your data doesn't change, JavaScript provides a function Object.freeze to prevent data mutation.
-let obj{
+
+/const allow update the properties/
+const constVar = {name:'Bob'};
+constVar.name = 'Sally';
+console.log(constVar.name); /Sally
+
+const obj{
 a:"abc",
 b:"cde"
 };
 Object.freeze(obj);
 obj.a="cd" / this would return error
 
+/ Valid, can reassign the variable to a new array
+let myArray = [1, 2, 3];
+myArray = [4, 5, 6];
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 / easily increment or add one to a variable
 i++; 
