@@ -44,4 +44,28 @@ person1.sayHello();
 /they are similar to classes in other programming languages. The "this" keyword is used to refer to the newly created object.
 /the "new" keyword do 3 things under the hood (1) create an empty object like const x = {} (2) make the "this" to point to the object (3) return the object from the function
 
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.sayHello = function() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  };
+}
+
+const person2 = new Person('Jane', 30);
+person2.sayHello();
+
+/ES6
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  sayHello() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+
+const person2 = new Person('Jane', 30);
+person2.sayHello();
 
