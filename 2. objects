@@ -1,5 +1,5 @@
 //*object*//
-// we access the data in objects through properties.
+/ we access the data in objects through properties.
 
 const anotherObject = {
   a1: "a2",  // if object has any non-string properties, JavaScript will automatically typecast them as strings.
@@ -7,7 +7,7 @@ const anotherObject = {
   "b1": "b2"
 };
 
-//there are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+/ there are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
 const myObj = {
   prop1: "val1",
   prop2: "val2"
@@ -23,18 +23,18 @@ const test1 = "prop1"
 const out = myObj[test1]
 console.log(out1) // val1 will be the output
 
-// updating Object Properties
+/ updating Object Properties
 myObj.prop1 = "val3"
 myObj[prop1] = "val3"
 
-// add New Properties to a JavaScript Object
+/ add New Properties to a JavaScript Object
 myObj.prop3 = "val4"
 myObj[prop3] = "val4"
 
-//delete Properties from a JavaScript Object
+/ delete Properties from a JavaScript Object
 delete myObj.prop3;
 
-//wsing Objects for Lookups
+/ wsing Objects for Lookups
 function lookup(val) {
   let result = "";
   const lookup = {
@@ -51,7 +51,7 @@ function lookup(val) {
 
 lookup("c");
 
-//testing Objects for Properties: Object.hasOwnProperty(Property) returns true or false depending on whether the property is found on the object or not.
+/ testing Objects for Properties: Object.hasOwnProperty(Property) returns true or false depending on whether the property is found on the object or not.
 function checkPro(object,property){
   return object.hasOwnProperty(property)
 };
@@ -59,6 +59,6 @@ function checkPro(object,property){
 checkPro({ top: 'hat', bottom: 'pants' }, 'top'); // true
 
 
-//a JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
-//the sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+/ a JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+/ the sub-properties of objects can be accessed by chaining together the dot or bracket notation.
 
