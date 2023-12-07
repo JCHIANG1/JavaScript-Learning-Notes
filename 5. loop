@@ -1,4 +1,4 @@
-/* while loop */
+//* while loop *//
 
 const testArray=[];
 let i = 5;
@@ -7,7 +7,7 @@ while(i<=5 && i>=0){
   i--;
 };
 
-/* for loop */
+//* for loop *//
 / for (a; b; c),  where a is the initialization statement, b is the condition statement, and c is the final expression.
 const testArray=[];
 testLoop(){
@@ -29,7 +29,7 @@ for (let i=0;i<myArr.length;i++){
  total+=myArr[i]
 };
 
-/* nested loop */
+//* nested loop *//
 const arr = [
   [1, 2], [3, 4], [5, 6]
 ];
@@ -40,7 +40,7 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-/* do...while loop */
+//* do...while loop *//
 / what makes the do...while different from other loops is how it behaves when the condition fails on the first check. A do...while loop ensures that the code inside the loop will run at least once.
 
 const myArray = []; 
