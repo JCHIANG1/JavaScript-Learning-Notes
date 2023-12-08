@@ -51,7 +51,7 @@ myArray.push(i);
 }; // the myArray is still =[]
 
 do {
-  ourArray.push(i);
+  myArray.push(i);
   i++;
 } while (i < 5); // the myArray is =[5]
 
