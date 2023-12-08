@@ -6,6 +6,7 @@ function howMany(...args) {
 console.log(howMany(0, 1, 2));
 console.log(howMany("string", null, [1, 2, 3], { }));
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* spread operator */  to expand arrays and other expressions in places where multiple parameters or elements are expected.
 / ...arr returns an unpacked array. It spreads the array, it only works in an argument to a function or in an array literal.
@@ -29,10 +30,7 @@ console.log(a, b); /1,2
 const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c); / 1, 2, 5
 
-
-
-
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* destructuring syntax */
 
@@ -97,6 +95,7 @@ const half = (stats) => (stats.max + stats.min) / 2.0;
 const half = ({max,min}) => (max+min)/2.0;
 half(stats);
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*Template Literals*/
 
@@ -109,5 +108,37 @@ const sayHi = `Hi, my name is ${person.name}.
 I'm ${person.age} year old.`; /backticks not quotes, the string is multi-line, both in the code and the output. This saves inserting \n within strings
 
 console.log(sayHi); 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* Object Literal Declarations Using Object Property Shorthand */
+const getMap = (x,y) => ({
+x:x,
+y:y
+});
+
+/ can be rewritten to
+const getMap = (x,y) => ({x,y});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* Concise Declarative Functions */
+const greeting = {
+name: "RC",
+hi: function(){
+  return ` hi, my name is ${this.name}. `
+};
+};
+
+/ can be rewritten to
+const greeting = {
+name: "RC",
+hi(){
+  return ` hi, my name is ${this.name}. `
+};
+};
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
