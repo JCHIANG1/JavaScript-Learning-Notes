@@ -1,5 +1,6 @@
 
 //* Factory function vs Constructor function *//
+
 /A factory function is a function that returns an object.
 function createPerson(name, age) {
   return {
@@ -66,4 +67,47 @@ console.log("fly!");
 
 const craft = new Rocket()
 craft.launcuh(); / fly!
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//*  getters and setters functions *//
+
+class book {
+constructor(author){
+this._author = author;
+}
+//getter
+get writer(){
+return this._author;
+}
+//setter
+set writer(updatedAuthor){
+this._author = updatedAuthor;
+}
+}
+
+const auth=new book("RC")
+console.log(auth.writer) /RC
+auth.writer = "JC"
+console.log(auth.write) /JC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
