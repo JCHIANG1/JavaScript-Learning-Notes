@@ -1,6 +1,4 @@
 
-
-
 //* Factory function vs Constructor function *//
 /A factory function is a function that returns an object.
 function createPerson(name, age) {
@@ -58,4 +56,14 @@ class Person {
 
 const person2 = new Person('Jane', 30);
 person2.sayHello();
+
+/ If the constructor method is not explicitly defined, then it is implicitly defined with no arguments.
+class Rocket{
+launch(){
+console.log("fly!");
+};
+}
+
+const craft = new Rocket()
+craft.launcuh(); / fly!
 
