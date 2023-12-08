@@ -98,3 +98,16 @@ const half = ({max,min}) => (max+min)/2.0;
 half(stats);
 
 
+/*Template Literals*/
+
+const person{
+name:"RC",
+age:"100"
+};
+
+const sayHi = `Hi, my name is ${person.name}.
+I'm ${person.age} year old.`; /backticks not quotes, the string is multi-line, both in the code and the output. This saves inserting \n within strings
+
+console.log(sayHi); 
+
+
