@@ -70,7 +70,7 @@ craft.launcuh(); / fly!
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//*  getters and setters functions *//
+//* getters and setters functions *//
 
 class book {
 constructor(author){
@@ -100,6 +100,10 @@ console.log(auth.write) /JC
 / It takes a function, as its argument, with two parameters - resolve and reject. These are methods used to determine the outcome of the promise. 
 
 const testPromise = new Promise((resolve,reject) => {});
+
+/ a promise has three states: pending, fulfilled, and rejected.
+/ the above testPromise is under the pending state, bc we did not add a way to complete the promise. 
+/ resolve is used when we want the promise to succeed, and reject is used when we want it to fail. 
 
 
 
