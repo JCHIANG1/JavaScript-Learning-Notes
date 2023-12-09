@@ -105,6 +105,27 @@ const testPromise = new Promise((resolve,reject) => {});
 / the above testPromise is under the pending state, bc we did not add a way to complete the promise. 
 / resolve is used when we want the promise to succeed, and reject is used when we want it to fail. 
 
+const testPromise2 = new Promise((resolve,reject) => {
+  if (SOME CONDITION){
+      resolve("Promise was fulfilled");  /it can really be anything. Often, it might be an object
+   } else {
+      reject("Promise was rejected");
+     }
+});
+
+/ then method
+/ the then method is executed immediately after the promise is fulfilled with resolve
+/ result comes from the argument given to the resolve method
+testPromise2.then(result => {
+console.log(result);
+}); / Promise was fulfilled
+
+/ catch method
+/ catch is used when the promise has been rejected. It is executed immediately after a promise's reject method
+/ error is the argument passed in to the reject method.
+testPromise2.catch(error => {
+console.log(error) / Promise was rejected
+});
 
 
 
