@@ -1,0 +1,43 @@
+//* Add a script to the HTML document of type module and give it the source file of filename.js *//
+/ A script that uses this module type can now use the import and export features
+<html>
+  <body>
+         <script type="module" src="filename.js"></script>
+  </body>
+</html>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// * export *//
+/ To share a function with these other JavaScript files, we first need to export it.
+export const test = (x, y) => {
+  return x + y;
+}
+/ alternative
+export {test, otherFunction1, otherFunction2};
+
+/ This is usually used when only one value is being exported from a file. It is also used to create a fallback value for a file or module.
+/ we can only have one value be a default export in each module or file. Additionally, we cannot use export default with var, let, or const
+
+/named function
+export default function test(){
+return 'test'
+};
+
+/anonymous function
+export default function(){
+return 'test'
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// * import *//
+/ import allows us to choose which parts of a file or module to load
+
+import {test} from './filename.js' /look for files in the same folder as the current file
+
+import * as myFunctions from "./filename.js"; /the object myFunctions will contain all of the exports from math_functions.js
+myFunctions.test(2,3);
+
+/ import the default function
+import test from './filename.js'; no {} 
