@@ -92,11 +92,14 @@ auth.writer = "JC"
 console.log(auth.write) /JC
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//* Promise *//
+/ we use it to make a promise to do something. When the task completes, we either fulfill promise or fail to do so. 
+/ Promise is a constructor function, so we need to use the new keyword to create one. 
+/ It takes a function, as its argument, with two parameters - resolve and reject. These are methods used to determine the outcome of the promise. 
 
-
-
-
+const testPromise = new Promise((resolve,reject) => {});
 
 
 
