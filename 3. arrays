@@ -1,12 +1,38 @@
 
 //* arrays *// 
 
-/nest arrays 
+/ one-dimensional array 
+/ it only has one level, or that it does not have any other arrays nested within it
+
+let simpleArray = ['one', 2, 'three', true, false, undefined, null];
+
+/ multi-dimensional array 
+/ an array that contains other arrays or objects
+let complexArray = [
+  [
+    {
+      one: 1,
+      two: 2
+    },
+    {
+      three: 3,
+      four: 4
+    }
+  ]
+];
+
 const teams = [["Bulls", 23], ["White Sox", 45]];
+
+/ a length property
+console.log(simpleArray.length);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /unlike strings, the entries of arrays are mutable and can be changed freely, even if the array was declared with const
 const myArray = [18, 64, 99];
 myArray[0]=45;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /push()
 const myArray = [[1, 23], [2, 2]];
@@ -27,3 +53,6 @@ console.log(removedFromMyArray);
 /unshift() works exactly like .push(), but instead of adding the element at the end of the array, unshift() adds the element at the beginning of the array.
 const myArray = [[1, 23], [2, 2]]; 
 myArray.unshift( "Paul");
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
