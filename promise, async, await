@@ -21,15 +21,68 @@ const testPromise2 = new Promise((resolve,reject) => {
 / then method
 / the then method is executed immediately after the promise is fulfilled with resolve
 / result comes from the argument given to the resolve method
-testPromise2.then(result => {
-console.log(result);    / Promise was fulfilled
-}).catch(error => {
-console.log(error) / Promise was rejected
-});
+
 / catch method
 / catch is used when the promise has been rejected. It is executed immediately after a promise's reject method
 / error is the argument passed in to the reject method.
 testPromise2
+
+testPromise2.then(result => {
+console.log(result);                      / Promise was fulfilled
+}).catch(error => {
+console.log(error)                        / Promise was rejected
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//* async functions *//
+/ An async function is a function that implicitly returns a promise.
+/ It allows the use of the await keyword within the function to wait for the promise to resolve or reject. The try-catch block is used for error handling.
+/ async and await are features in JavaScript that simplify working with asynchronous code, making it more readable and easier to reason about.
+
+/ Example without async and await:
+function fetchData(){
+   return fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+}
+
+/ Equivalent example with async and await:
+async function fetchData(){
+   try{
+     const response = await fetch('https://api.example.com/data');        
+     const data = await response.json();
+     console.log(data);
+   }catch(error){
+     console.error(error);
+   }
+}
+
+/to execute the async function
+fetchData()
+
+/ await can be used to pause the execution of an async function until the awaited promise is resolved. 
+/ the line const response = await fetch('https://api.example.com/data'); will pause the execution of the async function until the fetch operation is complete and the promise is resolved
+/ once the promise is resolved, the code will proceed to the next line.
+/ If the fetch call is rejected (e.g., due to a network error or if the server responds with an error status), it will skip the const data = await response.json(); line and jump directly to the catch block.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
