@@ -1,5 +1,7 @@
 //*object*//
 / we access the data in objects through properties(keys)
+/ a JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+/ the sub-properties of objects can be accessed by chaining together the dot or bracket notation.
 
 const anotherObject = {
   a1: "a2",  // if object has any non-string properties, JavaScript will automatically typecast them as strings.
@@ -52,14 +54,32 @@ function lookup(val) {
 
 lookup("c");
 
-/ testing Objects for Properties: Object.hasOwnProperty(Property) returns true or false depending on whether the property is found on the object or not.
+/ testing Objects for Properties: 
+/ Object.hasOwnProperty(Property) returns true or false depending on whether the property is found on the object or not.
 function checkPro(object,property){
   return object.hasOwnProperty(property)
 };
 
 checkPro({ top: 'hat', bottom: 'pants' }, 'top'); // true
 
+/ in keyword
+/ for example: If we have an object users with a property of Alan
+users.hasOwnProperty('Alan');
+'Alan' in users;
 
-/ a JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
-/ the sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/ iterate Through the Keys of an Object with a for...in Statement
+
+let foods = {
+"apple":1,
+"egg": 2
+};
+
+for (let food in foods){
+console.log(foods[food]);
+}; /1 /2
+
+/ return the object keys
+console.log(Object.keys(foods)) /["apple","egg"]
+
 
