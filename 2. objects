@@ -1,5 +1,5 @@
 //*object*//
-/ we access the data in objects through properties.
+/ we access the data in objects through properties(keys)
 
 const anotherObject = {
   a1: "a2",  // if object has any non-string properties, JavaScript will automatically typecast them as strings.
@@ -16,6 +16,7 @@ const myObj = {
 const prop1val = myObj.prop1;
 const prop2val = myObj.prop2;
 
+/ bracket notation is required if your property has a space in it or if you want to use a variable to name the property
 const prop1va3 = myObj["prop1"];
 const prop2va4 = myObj["prop2]";
 
